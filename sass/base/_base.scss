@@ -1,16 +1,60 @@
-// COLOR VARIABLES
-$color-primary: #c69963;
-$color-primary-dark: #B28451;
+body {
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    color: white;
+}
 
-$color-secondary: #101d2c;
+.container {
+    display: grid;
+    grid-template-rows: min-content min-content 40vw 40vw repeat(2, min-content) 36vw repeat(4, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] 
+    repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    // [full-start] 1fr [center-start] 
+    // repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] 1fr [full-end];
+}
 
-$color-grey-light-1: #f9f7f6;
-$color-grey-light-2: #aaa;
-
-$color-grey-dark-1: #54483A;
-$color-grey-dark-2: #6D5D4B;
-
-// FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
+.announcement-bar {
+    background-color: aqua;
+    grid-column: full-start / full-end;
+}
+.header {
+    background-color: red;
+    grid-column: center-start / center-end;
+}
+.banner {
+    background-color: rgb(34, 0, 255);
+    grid-column: full-start / full-end;
+}
+.large-pictures {
+    background-color: rgb(243, 5, 136);
+    grid-column: center-start / center-end;
+}
+.brands {
+    background-color: rgb(0, 220, 220);
+    grid-column: center-start / center-end;
+}
+.collections {
+    background-color: rgb(127, 0, 201);
+    grid-column: center-start / center-end;
+}
+.banner-2 {
+    background-color: rgb(255, 166, 0);
+    grid-column: full-start / full-end;
+}
+.new-arrival {
+    background-color: rgb(255, 88, 186);
+    grid-column: center-start / center-end;
+}
+.blog {
+    background-color: rgb(34, 24, 123);
+    grid-column: center-start / center-end;
+}
+.services {
+    background-color: rgb(148, 202, 0);
+    grid-column: full-start / full-end;
+}
+.footer {
+    background-color: rgb(24, 153, 28);
+    grid-column: center-start / center-end;
+}
 
