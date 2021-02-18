@@ -128,6 +128,7 @@ ul {
   width: 1.5rem;
   position: absolute;
   top: 50%;
+  right: -18px;
   transform: translateY(-40%);
   background-color: white;
   -webkit-mask-image: url(../../icon/SVG/chevron-small-down.svg);
