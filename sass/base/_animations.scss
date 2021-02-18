@@ -1,0 +1,27 @@
+// text slide animation 
+.text-slider__dynamic {
+    margin: 0;
+    height: 2rem !important;
+    line-height: 2em;
+    // text-transform: uppercase;
+    // text-align: left;
+    overflow: hidden;
+    // float: left;
+  }
+  
+  .vertical-slider {
+    margin: 0;
+    padding: 0;
+    //height: 10000px
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .vertical-slider__item {
+    margin: 0;
+    padding: 0;
+    line-height: 1.25em;
+    overflow: hidden;
+    letter-spacing: 2px;
+    // text-align: center;
+  }

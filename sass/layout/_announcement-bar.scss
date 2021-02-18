@@ -1,0 +1,94 @@
+.announcement-bar {
+  background-color: $color-secondary;
+  grid-column: full-start / full-end;
+  padding: 1rem 9rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.announcement {
+  &__icons a:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 300;
+
+    &-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  &__options {
+    display: flex;
+
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+
+  &__option:not(:last-child) {
+    margin-right: 4rem;
+    position: relative;
+  }
+
+  &__option:hover {
+    color: $color-primary;
+    cursor: pointer;
+  }
+
+  &__option__with-dropdown {
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-40%);
+      background-color: white;
+      -webkit-mask-image: url(../../icon/SVG/chevron-small-down.svg);
+      -webkit-mask-size: cover;
+      //   background-image: url(../../icon/SVG/gift.svg);
+      //   background-size: cover;
+    }
+
+    &:hover::after {
+      background-color: $color-primary;
+    }
+  }
+
+  &__option__dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 125px;
+    padding: 13px 19px 9px;
+    left: -16px;
+    margin-top: 1rem;
+
+    .nav__link {
+      display: inline-block;
+      color: $color-secondary;
+
+      &:hover {
+        color: currentColor;
+      }
+    }
+
+    .nav__item:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+  }
+}
+
+.showDropdown {
+  display: block;
+}

@@ -1,0 +1,16 @@
+.icon {
+    width: 2rem;
+    height: 2rem;
+
+    &__light {
+        fill: white;
+    }
+
+    &__dark {
+        fill: $color-secondary;
+    }
+
+    &:hover {
+        fill: $color-primary;
+    }
+}
