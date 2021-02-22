@@ -122,7 +122,7 @@ ul {
   cursor: pointer; }
 
 .announcement__option__with-dropdown::after {
-  content: "";
+  content: '';
   display: inline-block;
   height: 1.5rem;
   width: 1.5rem;
@@ -130,9 +130,16 @@ ul {
   top: 50%;
   right: -18px;
   transform: translateY(-40%);
-  background-color: white;
-  -webkit-mask-image: url(../../icon/SVG/chevron-small-down.svg);
-  -webkit-mask-size: cover; }
+  background-image: url(../../icon/SVG/gift.svg);
+  background-size: cover; }
+  @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+    .announcement__option__with-dropdown::after {
+      background-color: white;
+      -webkit-mask-image: url(../../icon/SVG/chevron-small-down.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../../icon/SVG/chevron-small-down.svg);
+      mask-size: cover;
+      background-image: none; } }
 
 .announcement__option__with-dropdown:hover::after {
   background-color: #ff7b34; }
